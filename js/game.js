@@ -95,4 +95,8 @@ randNum = function(){
     
 cardPull = function(){
     console.log(randNum()+" of "+randSuit());
+    $(".card").css({
+        background: 'url(images/cards/1_of_hearts.png)'
+    });
 };
+
