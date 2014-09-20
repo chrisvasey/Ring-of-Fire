@@ -7,9 +7,14 @@ $(window).load(function(){
 });
 
 
-//MENU LOAD
+// //MENU LOAD
+// $(window).load(function(){
+// 	$(".menu").fadeIn('slow');
+// });
+
+//DEV SET
 $(window).load(function(){
-	$(".menu").fadeIn('slow');
+	$(".game").fadeIn('slow');
 });
 
 //playGame Button
