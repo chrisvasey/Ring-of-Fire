@@ -7,15 +7,15 @@ $(window).load(function(){
 });
 
 
-// //MENU LOAD
-// $(window).load(function(){
-// 	$(".menu").fadeIn('slow');
-// });
-
-//DEV SET
+//MENU LOAD
 $(window).load(function(){
-	$(".game").fadeIn('slow');
+	$(".menu").fadeIn('slow');
 });
+
+// //DEV SET
+// $(window).load(function(){
+// 	$(".game").fadeIn('slow');
+// });
 
 //playGame Button
 $(document).ready(function(){
