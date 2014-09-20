@@ -34,7 +34,7 @@ randNum = function(){
     
     switch(n) {
         case n = 1:
-            var card = "Ace";
+            var card = "1";
         break;
             
         case n = 2:
@@ -74,15 +74,15 @@ randNum = function(){
         break;
             
         case n = 11:
-            var card = "Jack";
+            var card = "jack";
         break;
             
         case n = 12:
-            var card = "Queen";
+            var card = "queen";
         break;
             
         case n = 13:
-            var card = "King";
+            var card = "king";
         break;
             
         default:
