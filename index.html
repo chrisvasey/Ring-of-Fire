@@ -16,6 +16,7 @@
   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.0/less.min.js"></script>
   <script src="js/menu.js"></script>
+  <script src="js/game.js"></script>
   
   <!-- Font import -->
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -35,7 +36,7 @@
           </div>
         </div>
         <div class="row">
-          <button type="button" class="gameBtn btn btn-default btn-lg">NEW GAME</button>
+          <button type="button" class="gameBtn btn btn-default btn-lg">PLAY</button>
         </div>
         <div class="row">
           <button type="button" class="rulesBtn btn btn-default btn-lg">RULES</button>
@@ -49,10 +50,27 @@
   <div class="container game">
     <div class="col-md-12">
         <div class="row">
-          
+          <div class="card">
+            <!-- CARD SHOWN HERE -->
+          </div>
         </div>
         <div class="row">
-          <button type="button" class="back btn btn-default"><i class="fa fa-arrow-left"></i> BACK</button>
+          <div class="cardCount col-md-12">
+            <p>Number of cards left: <span>0</span></p>
+          </div>
+        </div>
+        <div class="btnWrap">
+          <div class="row">
+            <div class="col-md-12">
+              <button type="button" class="nextBtn btn btn-default">PULL NEXT CARD</button>  
+            </div>
+            <div class="col-md-12">
+              
+            </div>
+          </div>
+          <div class="row">
+            <button type="button" class="back btn btn-default">MENU</button><button type="button" class="rulesBtn btn btn-default">RULES</button>  
+          </div>
         </div>
     </div>
   </div>
@@ -129,7 +147,7 @@
                 You must pour a little of your drink into the nominated container. Whomever picks up the NEXT king must drink the whole thing, which could be filled with different drinks, so who knows how bad it could taste!  
               </ul>
             </li>
-            <br><br>
+            <br>
             Now that you know the rules. One person starts off by pulling a card, and whatever the card may be, follow the rule. Go in a circle and keep picking a card till you are too drunk to continue.
             <br><br>
             NOTE: These are just the rules I have always played. If you have any suggestions then feel free to get in touch, my contact details are on the info page.

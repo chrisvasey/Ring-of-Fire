@@ -12,7 +12,7 @@ $(window).load(function(){
 	$(".menu").fadeIn('slow');
 });
 
-//Play Button
+//playGame Button
 $(document).ready(function(){
 	$(".gameBtn").click(function() {
 		$(".menu").fadeOut('fast');
@@ -24,6 +24,7 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$(".rulesBtn").click(function() {
 		$(".menu").fadeOut('fast');
+		$(".game").fadeOut('fast');
 		$(".rules").delay(400).fadeIn('slow');
 	});
 });
