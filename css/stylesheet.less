@@ -3,6 +3,8 @@ html, body {
 	margin: 0;
 	height: 100%;
 	width: 100%;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif !important;
 }
 
 .menu {
@@ -16,6 +18,7 @@ html, body {
 			color: #e74c3c;
 			text-align: center;
 			font-size: 40px;
+			font-weight: 600;
 		}
 	}
 	button {
@@ -25,6 +28,7 @@ html, body {
 		margin-top: 10px;
 		width: 250px;
 		height: 100px;
+		color: #e74c3c;
 	}
 }
 
@@ -51,10 +55,12 @@ html, body {
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 15px;
+		color: #e74c3c;
 	}
 
 	button {
 		margin-top: 10px;
+		color: #e74c3c;
 	}
 
 	.cardCount {
@@ -67,6 +73,7 @@ html, body {
 		display: block;
 		margin-right: auto;
 		margin-left: auto;
+		color: #e74c3c;
 		// margin-bottom: 40px;
 		.rulesBtn {
 			margin-left: 13px;
@@ -76,7 +83,10 @@ html, body {
 		.back {
 			margin-left: 10px;
 			width: 75px;
-			// margin-bottom: 20px;
+			color: #e74c3c;
+			i {
+				color: #e74c3c;
+			}
 		}
 	}
 }
@@ -87,11 +97,13 @@ html, body {
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
+	font-size: 16px;
 	.title {
 		h1 {
 			color: #e74c3c;
 			text-align: center;
 			font-size: 40px;
+			font-weight: 600;
 		}
 	}
 	button {
@@ -99,9 +111,28 @@ html, body {
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 10px;
+		color: #e74c3c;
+		i {
+			color: #e74c3c;
+		}
+
 	}
 	i {
 		color: #e74c3c;
+	}
+	a {
+		color: #e74c3c
+	}
+	#foot {
+		margin-top: 30px;
+		text-align: center;
+	}
+}
+
+//Fix about width on large sceens
+@media (min-width: 720px) {
+	.info {
+		width: 602px;
 	}
 }
 
@@ -111,14 +142,25 @@ html, body {
 			color: #e74c3c;
 			text-align: center;
 			font-size: 40px;
+			font-weight: 600;
 		}
 	}
 	
 	li {
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
 		list-style: none;
+		font-size: 16px;
+		width: 70%;
+		padding: 0px;
 		ul {
+			padding: 0px;
+			text-align: center;
 			span {
 				color: #e74c3c;
+				font-size: 20px;
+				font-weight: 600;
 			}
 		}
 	}
@@ -128,6 +170,10 @@ html, body {
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 10px;
+		color: #e74c3c;
+		i {
+			color: #e74c3c;
+		}
 	}
 	.back {
 		margin-bottom: 20px;
