@@ -1,102 +1,50 @@
-randSuit = function(){
+function randSuit() {
 
-    var x = Math.floor(Math.random()*4) + 1
-    
-    switch(x){
+    var x = Math.floor(Math.random() * 4) + 1;
         
-        case x = 1:    
-            var suit = "spades";
-        break;
-            
-        case x = 2:    
-            var suit = "hearts";
-        break;
-            
-        case x = 3:    
-            var suit = "clubs";
-        break;
-            
-        case x = 4:    
-            var suit = "diamonds";
-        break;
-        
-        default:
-            var suit = "Shit it broke";
-        break;
-    };
-    // console.log("suit: "+suit);
+    if (x == 1) {
+        var suit = "spades";
+    }
+    else if (x == 2) {
+        var suit = "hearts";
+    }
+    else if (x == 3) {
+        var suit = "clubs";
+    }
+    else if (x == 4) {
+        var suit = "diamonds";
+    }
+
+    //console.log("suit: "+suit);
     return(suit);
-};
+}
 
-randNum = function(){
+function randNum() {
     
-    var n = Math.floor(Math.random()*13) + 1
+    var n = Math.floor(Math.random() * 13) + 1;
+
+    if (n <= 10) {
+        var number = n;
+    }
+    else if (n == 11) {
+        var number = "jack";
+    }
+    else if (n == 12) {
+        var number = "queen";
+    }
+    else if (n == 13) {
+        var number = "king";
+    }
+
+    //console.log("Number: "+number);
+    return(number);
+}
     
-    switch(n) {
-        case n = 1:
-            var card = "1";
-        break;
-            
-        case n = 2:
-            var card = "2";
-        break;
-                
-        case n = 3:
-            var card = "3";
-        break;
-            
-        case n = 4:
-            var card = "4";
-        break;
-            
-        case n = 5:
-            var card = "5";
-        break;
-            
-        case n = 6:
-            var card = "6";
-        break;
-            
-        case n = 7:
-            var card = "7";
-        break;
-            
-        case n = 8:
-            var card = "8";
-        break;
-            
-        case n = 9:
-            var card = "9";
-        break;
-            
-        case n = 10:
-            var card = "10";
-        break;
-            
-        case n = 11:
-            var card = "jack";
-        break;
-            
-        case n = 12:
-            var card = "queen";
-        break;
-            
-        case n = 13:
-            var card = "king";
-        break;
-            
-        default:
-            console.log("fuck it broke");
-        break;
-    };
-    // console.log("Card: "+card);
-    return(card);
-};
-    
-cardPull = function(){
-    console.log(randNum()+" of "+randSuit());
-    card = "url(images/cards/"+randNum()+"_of_"+randSuit()+".png)";
-    console.log(card);
+function cardPull() {
+    //console.log(randNum()+" of "+randSuit());
+    var card = "url('images/cards/"+randNum()+"_of_"+randSuit()+".png')";
+    //console.log(card);
+
+    //TODO: replace jQuery with native
     $(".card").css('background', card);
-};
-
+}
