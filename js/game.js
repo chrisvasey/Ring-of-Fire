@@ -1,50 +1,116 @@
-function randSuit() {
+var cards = [
+    "spades-1",
+    "spades-2",
+    "spades-3",
+    "spades-4",
+    "spades-5",
+    "spades-6",
+    "spades-7",
+    "spades-8",
+    "spades-9",
+    "spades-10",
+    "spades-jack",
+    "spades-queen",
+    "spades-king",
+    "hearts-1",
+    "hearts-2",
+    "hearts-3",
+    "hearts-4",
+    "hearts-5",
+    "hearts-6",
+    "hearts-7",
+    "hearts-8",
+    "hearts-9",
+    "hearts-10",
+    "hearts-jack",
+    "hearts-queen",
+    "hearts-king",
+    "clubs-1",
+    "clubs-2",
+    "clubs-3",
+    "clubs-4",
+    "clubs-5",
+    "clubs-6",
+    "clubs-7",
+    "clubs-8",
+    "clubs-9",
+    "clubs-10",
+    "clubs-jack",
+    "clubs-queen",
+    "clubs-king",
+    "diamonds-1",
+    "diamonds-2",
+    "diamonds-3",
+    "diamonds-4",
+    "diamonds-5",
+    "diamonds-6",
+    "diamonds-7",
+    "diamonds-8",
+    "diamonds-9",
+    "diamonds-10",
+    "diamonds-jack",
+    "diamonds-queen",
+    "diamonds-king"
+];
 
-    var x = Math.floor(Math.random() * 4) + 1;
-        
-    if (x == 1) {
-        var suit = "spades";
-    }
-    else if (x == 2) {
-        var suit = "hearts";
-    }
-    else if (x == 3) {
-        var suit = "clubs";
-    }
-    else if (x == 4) {
-        var suit = "diamonds";
-    }
+// Initialise game
+var game = cards.slice(0);
 
-    //console.log("suit: "+suit);
-    return(suit);
+$(document).ready(function(){
+
+    // Initialise remaining card count
+    $(".cardCount").text(game.length + " cards remaining");
+
+});
+
+function nextCard() {
+
+    if (game.length > 0) {
+
+        // Randomly pick a card
+        var random = Math.floor(Math.random() * game.length);
+        var card = game[random];
+
+        // Update card image
+        $("#card").removeClass().addClass(card);
+
+        // Remove card from game
+        var gameIndex = game.indexOf(card);
+        if (gameIndex != -1) {
+            game.splice(gameIndex, 1);
+        }
+
+        // Update remaining card count
+        if (game.length == 0) {
+            $(".cardCount").text("Game Over!");
+            $(".nextBtn").attr("disabled","disabled");
+        }
+        else if (game.length == 1) {
+            $(".cardCount").text(game.length + " card remaining");
+        }
+        else {
+            $(".cardCount").text(game.length + " cards remaining");
+        }
+
+        console.log("Pulled: " + card + " (" + random + "/" + (game.length + 1) + ")");
+
+    } else {
+
+        return false;
+
+    }
 }
 
-function randNum() {
-    
-    var n = Math.floor(Math.random() * 13) + 1;
+function resetGame() {
 
-    if (n <= 10) {
-        var number = n;
-    }
-    else if (n == 11) {
-        var number = "jack";
-    }
-    else if (n == 12) {
-        var number = "queen";
-    }
-    else if (n == 13) {
-        var number = "king";
-    }
+    // Reset card image
+    $("#card").removeClass();
 
-    //console.log("Number: "+number);
-    return(number);
-}
-    
-function cardPull() {
-    //console.log(randNum()+" of "+randSuit());
-    var card = "url('images/cards/"+randNum()+"_of_"+randSuit()+".png')";
-    //console.log(card);
+    // Reset the game
+    game = cards.slice(0);
 
-    //TODO: replace jQuery with native
-    $(".card").css('background', card);
+    // Reset remaining card count
+    $(".cardCount").text(game.length + " cards remaining");
+    $(".nextBtn").removeAttr("disabled");
+
 }

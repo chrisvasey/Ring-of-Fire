@@ -38,19 +38,75 @@ html, body {
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
-	.card {
+	#card {
 		cursor: pointer;
 		cursor: hand;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 		width: 240px;
-		height: 349px; 
+		height: 349px;
 		background: url(../images/noCard.png);
 		background-position: center;
 		background-size: cover;
+
+		&.spades-1      { background-image: url('../images/cards/1_of_spades.png') }
+		&.spades-2      { background-image: url('../images/cards/2_of_spades.png') }
+		&.spades-3      { background-image: url('../images/cards/3_of_spades.png') }
+		&.spades-4      { background-image: url('../images/cards/4_of_spades.png') }
+		&.spades-5      { background-image: url('../images/cards/5_of_spades.png') }
+		&.spades-6      { background-image: url('../images/cards/6_of_spades.png') }
+		&.spades-7      { background-image: url('../images/cards/7_of_spades.png') }
+		&.spades-8      { background-image: url('../images/cards/8_of_spades.png') }
+		&.spades-9      { background-image: url('../images/cards/9_of_spades.png') }
+		&.spades-10     { background-image: url('../images/cards/10_of_spades.png') }
+		&.spades-jack   { background-image: url('../images/cards/jack_of_spades.png') }
+		&.spades-queen  { background-image: url('../images/cards/queen_of_spades.png') }
+		&.spades-king   { background-image: url('../images/cards/king_of_spades.png') }
+
+		&.hearts-1      { background-image: url('../images/cards/1_of_hearts.png') }
+		&.hearts-2      { background-image: url('../images/cards/2_of_hearts.png') }
+		&.hearts-3      { background-image: url('../images/cards/3_of_hearts.png') }
+		&.hearts-4      { background-image: url('../images/cards/4_of_hearts.png') }
+		&.hearts-5      { background-image: url('../images/cards/5_of_hearts.png') }
+		&.hearts-6      { background-image: url('../images/cards/6_of_hearts.png') }
+		&.hearts-7      { background-image: url('../images/cards/7_of_hearts.png') }
+		&.hearts-8      { background-image: url('../images/cards/8_of_hearts.png') }
+		&.hearts-9      { background-image: url('../images/cards/9_of_hearts.png') }
+		&.hearts-10     { background-image: url('../images/cards/10_of_hearts.png') }
+		&.hearts-jack   { background-image: url('../images/cards/jack_of_hearts.png') }
+		&.hearts-queen  { background-image: url('../images/cards/queen_of_hearts.png') }
+		&.hearts-king   { background-image: url('../images/cards/king_of_hearts.png') }
+
+		&.clubs-1      { background-image: url('../images/cards/1_of_clubs.png') }
+		&.clubs-2      { background-image: url('../images/cards/2_of_clubs.png') }
+		&.clubs-3      { background-image: url('../images/cards/3_of_clubs.png') }
+		&.clubs-4      { background-image: url('../images/cards/4_of_clubs.png') }
+		&.clubs-5      { background-image: url('../images/cards/5_of_clubs.png') }
+		&.clubs-6      { background-image: url('../images/cards/6_of_clubs.png') }
+		&.clubs-7      { background-image: url('../images/cards/7_of_clubs.png') }
+		&.clubs-8      { background-image: url('../images/cards/8_of_clubs.png') }
+		&.clubs-9      { background-image: url('../images/cards/9_of_clubs.png') }
+		&.clubs-10     { background-image: url('../images/cards/10_of_clubs.png') }
+		&.clubs-jack   { background-image: url('../images/cards/jack_of_clubs.png') }
+		&.clubs-queen  { background-image: url('../images/cards/queen_of_clubs.png') }
+		&.clubs-king   { background-image: url('../images/cards/king_of_clubs.png') }
+
+		&.diamonds-1      { background-image: url('../images/cards/1_of_diamonds.png') }
+		&.diamonds-2      { background-image: url('../images/cards/2_of_diamonds.png') }
+		&.diamonds-3      { background-image: url('../images/cards/3_of_diamonds.png') }
+		&.diamonds-4      { background-image: url('../images/cards/4_of_diamonds.png') }
+		&.diamonds-5      { background-image: url('../images/cards/5_of_diamonds.png') }
+		&.diamonds-6      { background-image: url('../images/cards/6_of_diamonds.png') }
+		&.diamonds-7      { background-image: url('../images/cards/7_of_diamonds.png') }
+		&.diamonds-8      { background-image: url('../images/cards/8_of_diamonds.png') }
+		&.diamonds-9      { background-image: url('../images/cards/9_of_diamonds.png') }
+		&.diamonds-10     { background-image: url('../images/cards/10_of_diamonds.png') }
+		&.diamonds-jack   { background-image: url('../images/cards/jack_of_diamonds.png') }
+		&.diamonds-queen  { background-image: url('../images/cards/queen_of_diamonds.png') }
+		&.diamonds-king   { background-image: url('../images/cards/king_of_diamonds.png') }
 	}
-	.nextBtn {
+	.nextBtn, .resetBtn {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
@@ -67,7 +123,7 @@ html, body {
 		margin-top: 20px;
 		text-align: center;
 	}
-	
+
 	.btnWrap {
 		width: 155px;
 		display: block;
@@ -145,7 +201,7 @@ html, body {
 			font-weight: 600;
 		}
 	}
-	
+
 	li {
 		display: block;
 		margin-right: auto;
