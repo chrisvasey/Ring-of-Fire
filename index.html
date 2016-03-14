@@ -2,212 +2,221 @@
 <html lang="en">
 <head>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Ring of Fire</title>
-  
-  <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/main.less" type="text/less" media="screen" />
-  
-  <!-- Scripts -->
-  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.0/less.min.js"></script>
-  <script src="js/menu.js"></script>
-  <script src="js/game.js"></script>
-  
-  <!-- Font import -->
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <title>Ring of Fire</title>
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon" />
-  <link rel="icon" href="images/favicon.ico" type="image/vnd.microsoft.icon" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Facebook Share stuff -->
-  <meta property="og:image" content="images/icon.png" />
-  <meta property="og:title" content="Ring of Fire" />
-  <meta property="og:description" content="Ring of Fire Online Drinking Game"/> 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.less" type="text/less" media="screen"/>
+
+    <!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.0/less.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/game.js"></script>
+
+    <!-- Font import -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon"/>
+    <link rel="icon" href="images/favicon.ico" type="image/vnd.microsoft.icon"/>
+
+    <!-- Facebook Share stuff -->
+    <meta property="og:image" content="images/icon.png"/>
+    <meta property="og:title" content="Ring of Fire"/>
+    <meta property="og:description" content="Ring of Fire Online Drinking Game"/>
 
 </head>
 <body>
-  <div class="container menu">
+<div class="container menu">
     <div class="col-md-12">
         <div class="row">
-          <div class="title">
-            <h1>Ring of Fire</h1>
-          </div>
+            <div class="title">
+                <h1>Ring of Fire</h1>
+            </div>
         </div>
         <div class="row">
-          <button type="button" class="gameBtn btn btn-default btn-lg">PLAY</button>
+            <button type="button" class="gameBtn btn btn-default btn-lg">PLAY</button>
         </div>
         <div class="row">
-          <button type="button" class="rulesBtn btn btn-default btn-lg">RULES</button>
+            <button type="button" class="rulesBtn btn btn-default btn-lg">RULES</button>
         </div>
         <div class="row">
-          <button type="button" class="infoBtn btn btn-default btn-lg">INFO</button>
+            <button type="button" class="infoBtn btn btn-default btn-lg">INFO</button>
         </div>
     </div>
-  </div>
+</div>
 
-  <div class="container game">
+<div class="container game">
     <div class="col-md-12">
         <div class="row">
-          <div onclick="cardPull()" class="card">
-            <!-- CARD SHOWN HERE -->
-          </div>
+            <div onclick="nextCard()" id="card">
+                <!-- CARD SHOWN HERE -->
+            </div>
         </div>
         <div class="row">
-          <div class="cardCount col-md-12">
-            <!-- <p>WARNING CURRENTLY UNLIMITED GAME</p> -->
-          </div>
+            <div class="cardCount col-md-12">&mdash; cards remaining</div>
         </div>
         <div class="btnWrap">
-          <div class="row">
-            <div class="col-md-12">
-              <button onclick="cardPull()" type="button" class="nextBtn btn btn-default">PULL NEXT CARD</button>  
+            <div class="row">
+                <div class="col-md-12">
+                    <button onclick="nextCard()" type="button" class="nextBtn btn btn-default">NEXT CARD</button>
+                </div>
+                <div class="col-md-12">
+                    <button onclick="resetGame()" type="button" class="resetBtn btn btn-default">RESET</button>
+                </div>
             </div>
-            <div class="col-md-12">
-              
+            <div class="row">
+                <button type="button" class="back btn btn-default">MENU</button>
+                <button type="button" class="rulesBtn btn btn-default">RULES</button>
             </div>
-          </div>
-          <div class="row">
-            <button type="button" class="back btn btn-default">MENU</button><button type="button" class="rulesBtn btn btn-default">RULES</button>  
-          </div>
         </div>
     </div>
-  </div>
+</div>
 
 
-  <div class="container rules">
+<div class="container rules">
     <div class="col-md-12">
         <div class="row">
-          <div class="title">
-            <h1>Rules of Ring of Fire</h1>
-          </div>
+            <div class="title">
+                <h1>Rules of Ring of Fire</h1>
+            </div>
         </div>
         <div class="row">
-          <p>
-            <br>
-            It is important to remember that everyone has played a different version of this game so the rules may differ from group to group but I am sure you can all come to some kind of agreement. <br>
-            <br>
-            First to set up the game, grab a cup/pan/bowl or any other container that can be used to hold alcohol
-            <br>
-            Everyone get a drink and take it in turns to pull a card (or tap a phone screen) then follow the rules depending on what card they pull.
-            <br>
-            Before you start the game you must know what each card stands for:
-            <br><br>
+            <p>
+                <br>
+                It is important to remember that everyone has played a different version of this game so the rules may
+                differ from group to group but I am sure you can all come to some kind of agreement. <br>
+                <br>
+                First to set up the game, grab a cup/pan/bowl or any other container that can be used to hold alcohol
+                <br>
+                Everyone get a drink and take it in turns to pull a card (or tap a phone screen) then follow the rules
+                depending on what card they pull.
+                <br>
+                Before you start the game you must know what each card stands for:
+                <br><br>
             <li>
-              <ul>
-                <span>Ace - Waterfall.</span><br>
-                Everyone must keep drinking until the person who picked the card stops. So who knows how long you will be going for!
-              </ul>
-              <ul>
-                <span>2 - You (choose)</span><br>
-                You can choose someone to drink</ul>
-              <ul>
-                <span>3 - Me</span><br>
-                You must drink  
-              </ul>
-              <ul>
-                <span>4 - Whores</span><br>
-                All girls drink  
-              </ul>
-              <ul>
-                <span>5 - Thumb Master</span><br>
-                When you put your thumb on the table everyone must follow and whomever is last must drink. you are the thumb master till someone else picks a five.  
-              </ul>
-              <ul>
-                <span>6 - Dicks</span><br>
-                All guys drink  
-              </ul>
-              <ul>
-                <span>7 - Heaven</span><br>
-                Point your finger in the sky, whoever is last must drink  
-              </ul>
-              <ul>
-                <span>8 - Mate</span><br>
-                Choose someone to drink with you  
-              </ul>
-              <ul>
-                <span>9 - Rhyme</span><br>
-                Pick a word such a dog and the person next to you must rhyme with dog, like log, and it goes to the next person and the next, in a circle, until someone messes up and he or she will have to drink  
-              </ul>
-              <ul>
-                <span>10 - Categories</span><br>
-                Pick a category such as card games (It could be a lot more interesting), everyone must go round the circle naming different names of card games. Whoever messes up, drinks.  
-              </ul>
-              <ul>
-                <span>Jack - Make a Rule</span><br>
-                You can make up any rule that everyone has to follow, such as you can only drink with your right hand. Everyone (including you) must follow this rule for the whole entire game and if you disobey you must drink.  
-              </ul>
-              <ul>
-                <span>Queen - Question Master</span><br>
-                The person who pulled the card is now the question master. If they ask a question and someone else who is playing the game responds, they must drink.  
-              </ul>
-              <ul>
-                <span>King - Pour</span><br>
-                You must pour a little of your drink into the nominated container. Whomever picks up the NEXT king must drink the whole thing, which could be filled with different drinks, so who knows how bad it could taste!  
-              </ul>
+                <ul>
+                    <span>Ace - Waterfall.</span><br>
+                    Everyone must keep drinking until the person who picked the card stops. So who knows how long you
+                    will be going for!
+                </ul>
+                <ul>
+                    <span>2 - You (choose)</span><br>
+                    You can choose someone to drink
+                </ul>
+                <ul>
+                    <span>3 - Me</span><br>
+                    You must drink
+                </ul>
+                <ul>
+                    <span>4 - Whores</span><br>
+                    All girls drink
+                </ul>
+                <ul>
+                    <span>5 - Thumb Master</span><br>
+                    When you put your thumb on the table everyone must follow and whomever is last must drink. you are
+                    the thumb master till someone else picks a five.
+                </ul>
+                <ul>
+                    <span>6 - Dicks</span><br>
+                    All guys drink
+                </ul>
+                <ul>
+                    <span>7 - Heaven</span><br>
+                    Point your finger in the sky, whoever is last must drink
+                </ul>
+                <ul>
+                    <span>8 - Mate</span><br>
+                    Choose someone to drink with you
+                </ul>
+                <ul>
+                    <span>9 - Rhyme</span><br>
+                    Pick a word such a dog and the person next to you must rhyme with dog, like log, and it goes to the
+                    next person and the next, in a circle, until someone messes up and he or she will have to drink
+                </ul>
+                <ul>
+                    <span>10 - Categories</span><br>
+                    Pick a category such as card games (It could be a lot more interesting), everyone must go round the
+                    circle naming different names of card games. Whoever messes up, drinks.
+                </ul>
+                <ul>
+                    <span>Jack - Make a Rule</span><br>
+                    You can make up any rule that everyone has to follow, such as you can only drink with your right
+                    hand. Everyone (including you) must follow this rule for the whole entire game and if you disobey
+                    you must drink.
+                </ul>
+                <ul>
+                    <span>Queen - Question Master</span><br>
+                    The person who pulled the card is now the question master. If they ask a question and someone else
+                    who is playing the game responds, they must drink.
+                </ul>
+                <ul>
+                    <span>King - Pour</span><br>
+                    You must pour a little of your drink into the nominated container. Whomever picks up the NEXT king
+                    must drink the whole thing, which could be filled with different drinks, so who knows how bad it
+                    could taste!
+                </ul>
             </li>
             <br>
-            Now that you know the rules. One person starts off by pulling a card, and whatever the card may be, follow the rule. Go in a circle and keep picking a card till you are too drunk to continue.
+            Now that you know the rules. One person starts off by pulling a card, and whatever the card may be, follow
+            the rule. Go in a circle and keep picking a card till you are too drunk to continue.
             <br><br>
-            NOTE: These are just the rules I have always played. If you have any suggestions then feel free to get in touch, my contact details are on the info page.
+            NOTE: These are just the rules I have always played. If you have any suggestions then feel free to get in
+            touch, my contact details are on the info page.
             <br><br>
             <!-- Rules adapted from <a href="http://www.ringoffirerules.com/">here</a>
             <br><br> -->
-          </p>
+            </p>
         </div>
         <div class="row">
-          <button type="button" class="back btn btn-default"><i class="fa fa-arrow-left"></i> BACK</button>
+            <button type="button" class="back btn btn-default"><i class="fa fa-arrow-left"></i> BACK</button>
         </div>
     </div>
-  </div>
+</div>
 
-  <div class="container info">
+<div class="container info">
     <div class="col-md-12">
         <div class="row">
-          <div class="title">
-            <h1>a little info..</h1>
-          </div>
+            <div class="title">
+                <h1>a little info..</h1>
+            </div>
         </div>
         <div class="row">
-          <p>
-            <br>
-            <br>
-            Hello! <br><br>
-            I love ring of fire, it has to be one of the best drinking games, though countless times my friends and I have been unable to play because we can't find a pack of cards. The sadness of being unable to down a mixture of 10 different spirits in a dirty pint glass has inspired me to make this.
-            <br>
-            <br>
-            Happy Drinking!
-            <br>
-            <br>
-          </p>
-          <p id="foot">
-            By <a href="https://twitter.com/chris_vasey">@chris_vasey</a> <br>
-            <a href="http://chrisvasey.com">
-              chrisvasey.com
-            </a><br>
-            Made with <i class="fa fa-heart"></i> and Javascript <br>
-          </p>
+            <p>
+                <br>
+                <br>
+                Hello!
+                <br>
+                <br>
+                I love ring of fire, it has to be one of the best drinking games, though countless times my friends and
+                I have been unable to play because we can't find a pack of cards. The sadness of being unable to down a
+                mixture of 10 different spirits in a dirty pint glass has inspired me to make this.
+                <br>
+                <br>
+                Happy Drinking!
+                <br>
+                <br>
+            </p>
+
+            <p id="foot">
+                By <a href="https://twitter.com/chris_vasey">@chris_vasey</a> <br>
+                <a href="http://chrisvasey.com">
+                    chrisvasey.com
+                </a><br>
+                Made with <i class="fa fa-heart"></i> and Javascript <br>
+            </p>
         </div>
         <div class="row">
-          <button type="button" class="back btn btn-default"><i class="fa fa-arrow-left"></i> BACK</button>
+            <button type="button" class="back btn btn-default"><i class="fa fa-arrow-left"></i> BACK</button>
         </div>
     </div>
-  </div>
-
-
-
-
-
-
-
-
-
+</div>
 
 
 <!-- Bootstrap core JavaScript
